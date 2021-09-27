@@ -1,0 +1,11 @@
+let myArray = [];
+myArray.push("Student");
+myArray.push(25);
+myArray.push(true);
+myArray.push(null);
+alert(myArray.length);
+let number = prompt("Please, enter a number?", "number");
+myArray[4] = number;
+alert(myArray[4]);
+myArray.shift();
+alert(myArray);
