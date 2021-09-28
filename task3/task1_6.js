@@ -19,5 +19,5 @@ let findUnique = (arr) => {
     return true;
 }
 
-findUnique([1, 2, 3, 5, 3]);
-findUnique([1, 2, 3, 5, 11]);
+console.log(findUnique([1, 2, 3, 5, 3]));
+console.log(findUnique([1, 2, 3, 5, 11]));

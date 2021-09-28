@@ -9,5 +9,7 @@ const capitalizeNames = (str) => {
         arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     }
     const strConverted = arr.join(" ");
-    console.log(strConverted);
+    return strConverted
 };
+
+console.log(capitalizeNames('i love java script'));

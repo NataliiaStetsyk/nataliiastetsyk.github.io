@@ -13,4 +13,4 @@ let randArray = (k) => {
     return arr;
 }
 
-randArray(5)
+console.log(randArray(5))
