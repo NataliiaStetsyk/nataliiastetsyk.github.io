@@ -8,16 +8,15 @@
 
 let checkAge = () => {
     let age = prompt("Enter age");
-    if (age === "") throw new Error("The field is empty! Please enter your age");
-    else if (isNaN(age)) throw new Error("Not a number!");
-    else if (age < 14) throw new Error("You are too young");
-    else console.log("WELCOME!");
-    try {
-        checkAge();
-    }
-    catch (err) {
-        console.log(err.name);
-        console.log(err.message);
-    }
+    if (age === "") { throw new Error("The field is empty! Please enter your age"); }
+    else if (isNaN(age)) { throw new Error("Not a number!"); }
+    else if (age < 14) { throw new Error("You are too young"); }
+    else { console.log("WELCOME!"); }
 }
-console.log(checkAge());
+try {
+    checkAge();
+}
+catch (err) {
+    console.log(err.name);
+    console.log(err.message);
+}
