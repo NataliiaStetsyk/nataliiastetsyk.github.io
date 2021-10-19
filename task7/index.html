@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+
+<body onload="getSize()" onresize="getSize()">
+    <button onclick="openWin()">Create new window</button>
+    <button onclick="resizeWinTo()">Resize window with timeout 2 seconds</button>
+    <button onclick="moveWinTo()">Move new window with timeout 2 seconds</button>
+    <button onclick="closeWin()">Close window with timeout 2 seconds</button>
+
+    <p id='text'>I learning JavaScript events!</p>
+    <div>
+        <button onclick="changeCSS()">Change style!</button>
+    </div>
+    <br>
+    <div>
+        <button onclick="changeBlue()">Click to make the page blue</button>
+        <button ondblclick="changePink()">Double click to make the page pink</button>
+        <button onmousedown="changeBrown()" onmouseup="changeWhite()">Click and hold to make the page brown</button>
+        <a href="https://www.w3schools.com" onmouseover="changeYellowByLink()" onmouseout="changeWhiteByLink()">Hover
+            over
+            to make the page yellow</a>
+    </div>
+    <br>
+    <div>
+        <select id="mySelect" size="5">
+            <option value="peter">Peter</option>
+            <option value="john">John</option>
+            <option value="alise">Alise</option>
+            <option value="alex">Alex</option>
+            <option value="iren">Iren</option>
+        </select>
+        <button id="delete" onclick="chooseAndDelete()">Choose and delete</button>
+    </div>
+    <br>
+    <div>
+        <button onmousedown="pressed()" onmouseover="hovered()" onmouseout="released()">Live button!</button>
+        <p id="live"></p>
+    </div>
+    <br>
+    <div id="wh"> 
+        <!-- Place height and width size here! --> 
+    </div>
+    <br>
+    <script src="task7_1.js"></script>
+    <script src="task7_2.js"></script>
+    <script src="task7_3.js"></script>
+    <script src="task7_4.js"></script>
+    <script src="task7_5.js"></script>
+    <script src="task7_6.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+
+<body onload="selectCountry()">
+    <select name="country" id="country" onchange="selectCountry(this.value)">
+        <option value="ger" selected>Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+    <select name="cities" id="cities"></select>
+    <p></p>
+    <script>
+        let cities = {
+            ger: ["Berlin", "Gannover", "Keln"],
+            usa: ["Boston", "New-York", "Washington"],
+            ukr: ["Lviv", "Kyiv", "Poltava"],
+        };
+        let country = document.getElementById("country");
+        let city = document.getElementById("cities");
+        let selectCountry = (value) => {
+            let citiesOptions = "";
+            for (let i in cities[value]) {
+                citiesOptions += "<option>" + cities[value][i] + "</option>";
+            }
+            document.getElementById("cities").innerHTML = citiesOptions;
+            document.getElementsByTagName("p")[0].innerHTML = country.options[country.selectedIndex].text + ", " + city.options[city.selectedIndex].text;
+        };
+        window.onload = selectCountry;
+        country.onchage = selectCountry;
+    </script>
+</body>
+
+</html>
