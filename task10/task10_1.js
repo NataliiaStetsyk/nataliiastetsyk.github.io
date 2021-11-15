@@ -20,4 +20,4 @@ http.createServer(function (request, response) {
         + br + "Server File Name: " + path.basename("./task10/task10_1.js") + br);
     response.end();
 }).listen(5000);
-console.log('If you seee this, you are on the right way');
+console.log("Server running on port 5000");

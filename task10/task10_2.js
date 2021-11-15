@@ -24,8 +24,8 @@ http.createServer(function (req, res) {
       res.write(`Good evening, ${user.getUserInfo()}`);
    }
    if (hour >= 24 && hour < 6) {
-      res.write(`Good evening, ${user.getUserInfo()}`);
+      res.write(`Good night, ${user.getUserInfo()}`);
    }
    res.end();
 }).listen(8000);
-console.log('If you seee this, you are on the right way');
+console.log("Server running on port 8000");
