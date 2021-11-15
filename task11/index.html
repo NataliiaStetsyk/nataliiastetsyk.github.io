@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Task 11</title>
+</head>
+
+<body>
+    <button id="vote" onclick="acceptVote()">Vote!</button>
+    <br><br><br>
+    <button id="books" onclick="downloadBooks()">Download books</button>
+
+    <script>
+        function downloadBooks() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "books.json");
+            xhttp.send();
+            xhttp.onload = function () {
+                const data = document.getElementById("books").innerHTML =
+                this.responseText;
+                booksList(data)
+            }
+        }
+        function booksList(data) {
+            if (typeof (data) == 'object') {
+                document.write('<ul>');
+                for (let i in data) {
+                    document.write('<li>') + data[i];
+                }
+                document.write('</ul>');
+            } 
+        }
+        function acceptVote() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                const vote = document.getElementById("vote").innerHTML =
+                    this.responseText;
+                timer(vote);
+            }
+            xhttp.open("GET", "ajax_info.txt");
+            xhttp.send();
+        }
+
+        function timer() {
+            const time = new Date();
+            document.getElementById("vote").innerHTML = "Your vote is accepted: " + time;
+        }
+    </script>
+
+</body>
+
+</html>

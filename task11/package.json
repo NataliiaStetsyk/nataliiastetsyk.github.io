@@ -1,0 +1,16 @@
+{
+  "name": "task11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task11_1.js",
+  "dependencies": {
+    "node-static": "^0.7.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
